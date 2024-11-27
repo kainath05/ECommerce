@@ -20,7 +20,7 @@ namespace ECommerce.Api.Search.Services
             this.logger = logger;
         }
 
-        public async Task<(bool IsSuccess, IEnumerable<Order> Orders, string ErrorMessage)> GetOrdersAsync(int customerId)
+        public async Task<(bool IsSuccess, IEnumerable<Models.Order> Orders, string ErrorMessage)> GetOrdersAsync(int customerId)
         {
             try
             {
