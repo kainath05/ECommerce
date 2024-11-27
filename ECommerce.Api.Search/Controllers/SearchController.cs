@@ -5,6 +5,15 @@ using System.Threading.Tasks;
 
 namespace ECommerce.Api.Search.Controllers
 {
+    /*Course: 		Web Programming 3
+* Assessment: 	Milestone 4
+* Created by: 	Kainath Ahmed - 2268774
+* Date: 		<27> <November> 2024
+* Class Name: 	SearchController.cs
+* Description: 	Gets a specific customerid with all their microservices like products, order and customer info. 
+* Time for Task: 4 HOURS.
+*/
+
     [ApiController]
     [Route("api/search")]
     public class SearchController :ControllerBase

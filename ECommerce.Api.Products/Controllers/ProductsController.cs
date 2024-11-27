@@ -4,6 +4,15 @@ using System.Threading.Tasks;
 
 namespace ECommerce.Api.Products.Controllers
 {
+    /*Course: 		Web Programming 3
+* Assessment: 	Milestone 4
+* Created by: 	Kainath Ahmed - 2268774
+* Date: 		<27> <November> 2024
+* Class Name: 	ProductsController.cs
+* Description: 	Gets products or a specific product. 
+* * Time for Task: 4 HOURS.
+*/
+
     [ApiController]
     [Route("api/products")]
     public class ProductsController : ControllerBase
