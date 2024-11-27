@@ -6,13 +6,13 @@ namespace ECommerce.Api.Products.Controllers
 {
     [ApiController]
     [Route("api/products")]
-    public class ProductsController :ControllerBase
+    public class ProductsController : ControllerBase
     {
         private readonly IProductsProvider productsProvider;
         public ProductsController(IProductsProvider productsProvider)
         {
             this.productsProvider = productsProvider;
-            
+
         }
 
         [HttpGet]
@@ -22,6 +22,17 @@ namespace ECommerce.Api.Products.Controllers
             if (result.IsSuccess)
             {
                 return Ok(result.Products);
+            }
+            return NotFound();
+        }
+
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetProductAsync(int id)
+        {
+            var result = await productsProvider.GetProductAsync(id);
+            if (result.IsSuccess)
+            {
+                return Ok(result.Product);
             }
             return NotFound();
         }
